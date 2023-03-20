@@ -1,7 +1,9 @@
 let name = prompt("Please enter your name");
 
-let gender = "";
-while  (gender !== 'male' && gender !== 'female') {
+let gender = findout();
+function findout(){
+let gender;
+  while  (gender !== 'male' && gender !== 'female') {
  gender = prompt("Please enter your gender (male or female): ");
 
 } 
@@ -10,7 +12,7 @@ if (gender === "male") {
   alert("Hello Mr " + name);
 } else if (gender === "female") {
   alert("Hello Ms " + name);
-} 
+} }
 
 let drink = prompt("do you want a hot or a cold drink?")
 let drinkName= prompt("name of the drink")
