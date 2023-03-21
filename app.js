@@ -1,5 +1,10 @@
 let name = prompt("Please enter your name.");
 let Age = prompt('Please enter your age.')
+
+while (Age >= 100 || Age <= 0) {
+  Age = prompt("Please enter your age again.")
+}
+
 let gender = findout();
 
 function findout() {
