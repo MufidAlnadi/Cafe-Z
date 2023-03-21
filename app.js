@@ -1,7 +1,8 @@
-let name = prompt("Please enter your name");
-
+let name = prompt("Please enter your name.");
+let Age = prompt('Please enter your age.')
 let gender = findout();
-function findout(){
+
+function findout() {
 let gender;
   while  (gender !== 'male' && gender !== 'female') {
  gender = prompt("Please enter your gender (male or female): ");
@@ -12,7 +13,10 @@ if (gender === "male") {
   alert("Hello Mr " + name);
 } else if (gender === "female") {
   alert("Hello Ms " + name);
-} }
+}
+
+return gender;
+}
 
 let drink = prompt("do you want a hot or a cold drink?")
 let drinkName= prompt("name of the drink")
@@ -25,5 +29,17 @@ for (let i = 0 ; i < arr.length; i++){
   
 }
 
-// test2
-//functionTask
+const para = document.createElement("p");
+ para.innerHTML = name;
+userInput.appendChild(para)
+const ul = document.createElement("ul");
+userInput.appendChild(ul)
+const li = document.createElement("li")
+li.textContent= `Gender :  ${gender} `;
+userInput.appendChild(li)
+const li2 = document.createElement("li")
+li2.textContent= `Age :  ${Age} `;
+userInput.appendChild(li2)
+const li3 = document.createElement("li")
+li3.textContent= `Drink : ${drink} ${drinkName}   `;
+userInput.appendChild(li3)
