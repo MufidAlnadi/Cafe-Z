@@ -43,7 +43,7 @@ myForm.addEventListener("submit", function(event) {
   const formData = new FormData(myForm);
 
   // Name
- const username = document.createElement("p");
+ const username = document.createElement("h3");
  username.innerHTML = formData.get("username");
  userInput.appendChild(username);
  
@@ -64,7 +64,7 @@ const coldCheckbox = document.querySelector('input[name="cold"]');
 
 let drinkTemperature;
 if (hotCheckbox.checked) {
-  drinkTemperature = "hot";
+  drink = "hot";
 }
 else if (coldCheckbox.checked) {
   drinkTemperature = "cold";
@@ -89,7 +89,7 @@ userInput.appendChild(drink);
 
 
 
-// /////////////////////
+/////////////////////////////////////////////////
 // const name = document.getElementById("name")
 
 // const para = document.createElement("p");
