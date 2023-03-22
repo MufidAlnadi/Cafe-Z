@@ -35,37 +35,54 @@
   
 // }
 const myForm = document.getElementById("myForm");
-myForm.addEventListener("submit", function(event) {
-  // Prevent the form from submitting
-  event.preventDefault(); // to handle the event yourself insted of the browser
-  
-  // Get the form data
-  const userInput= document.getElementById("userInput")
 
+myForm.addEventListener("submit", function(event) {
+  event.preventDefault(); 
+  
+  const userInput= document.getElementById("userInput")
   const formData = new FormData(myForm);
-  // Log the form data to the console
-  console.log(formData.get("username"));
-  console.log(formData.get("age"));
-  
- const para = document.createElement("p");
- para.innerHTML = formData.get("username");
- userInput.appendChild(para);
-  
- const age = document.createElement("p");
+
+  // Name
+ const username = document.createElement("p");
+ username.innerHTML = formData.get("username");
+ userInput.appendChild(username);
+ 
+ const ul = document.createElement("ul");
+ userInput.appendChild(ul) 
+
+ const age = document.createElement("li");
  age.innerHTML = formData.get("age");
  userInput.appendChild(age);
 
-//  const gender = document.createElement("p");
-//  gender.innerHTML = formData.get("gender");
-//  myForm.appendChild(gender);
+ const gender = document.createElement("li");
+ gender.innerHTML = formData.get("gender");
+ userInput.appendChild(gender);
 
-//  const par = document.createElement("p");
-//  par.innerHTML = formData.get("number");
-//  myForm.appendChild(par);
+// Get the checkbox elements
+const hotCheckbox = document.querySelector('input[name="hot"]');
+const coldCheckbox = document.querySelector('input[name="cold"]');
 
-//  const par = document.createElement("p");
-//  par.innerHTML = formData.get("number");
-//  myForm.appendChild(par);
+let drinkTemperature;
+if (hotCheckbox.checked) {
+  drinkTemperature = "hot";
+}
+else if (coldCheckbox.checked) {
+  drinkTemperature = "cold";
+}
+
+
+
+const drink = document.createElement("li");
+drink.innerHTML = drinkTemperature;
+userInput.appendChild(drink);
+
+
+
+ const drinkname = document.createElement("li");
+ drinkname.innerHTML = formData.get("drinkname");
+ userInput.appendChild(drinkname);
+
+
 });
 
 
