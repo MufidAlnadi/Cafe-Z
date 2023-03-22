@@ -43,7 +43,7 @@ myForm.addEventListener("submit", function(event) {
   const formData = new FormData(myForm);
 
   // Name
- const username = document.createElement("p");
+ const username = document.createElement("h3");
  username.innerHTML = formData.get("username");
  userInput.appendChild(username);
  
