@@ -29,66 +29,6 @@
 // alert("your drink is getting prepared")
 // let arr = [ name , gender  , drink , drinkName]
 
-// for (let i = 0 ; i < arr.length; i++){
-//   console.log(arr[i])
-
-  
-// }
-const myForm = document.getElementById("myForm");
-
-myForm.addEventListener("submit", function(event) {
-  event.preventDefault(); 
-  
-  const userInput= document.getElementById("userInput")
-  const formData = new FormData(myForm);
-
-  // Name
- const username = document.createElement("h3");
- username.innerHTML = formData.get("username");
- userInput.appendChild(username);
- 
- const ul = document.createElement("ul");
- userInput.appendChild(ul) 
-
- const age = document.createElement("li");
- age.innerHTML = formData.get("age");
- userInput.appendChild(age);
-
- const gender = document.createElement("li");
- gender.innerHTML = formData.get("gender");
- userInput.appendChild(gender);
-
-// Get the checkbox elements
-const hotCheckbox = document.querySelector('input[name="hot"]');
-const coldCheckbox = document.querySelector('input[name="cold"]');
-
-let drinkTemperature;
-if (hotCheckbox.checked) {
-  drinkTemperature = "hot";
-}
-else if (coldCheckbox.checked) {
-  drinkTemperature = "cold";
-}
-
-
-
-const drink = document.createElement("li");
-drink.innerHTML = drinkTemperature;
-userInput.appendChild(drink);
-
-
-
- const drinkname = document.createElement("li");
- drinkname.innerHTML = formData.get("drinkname");
- userInput.appendChild(drinkname);
-
-
-});
-
-
-
-
-
 // /////////////////////
 // const name = document.getElementById("name")
 
@@ -110,6 +50,68 @@ userInput.appendChild(drink);
 // const myButton = document.getElementById("myButton");
 
 // myButton.addEventListener("click", function(event) {
-//   event.preventDefault();
-//   alert("your drink is getting prepared")
-// });
+  //   event.preventDefault();
+  //   alert("your drink is getting prepared")
+  // });
+  
+
+// for (let i = 0 ; i < arr.length; i++){
+//   console.log(arr[i])
+
+  
+// }
+
+
+
+
+  const myForm = document.getElementById("myForm");
+  
+  myForm.addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    
+    const userInput= document.getElementById("userInput")
+    // id = myfrom /* Logs the value of the "name" field *\
+    const formData = new FormData(myForm);
+  
+    // Name
+   const username = document.createElement("h3");
+   username.innerHTML = formData.get("username");
+   userInput.appendChild(username);
+   
+   const ul = document.createElement("ul");
+   userInput.appendChild(ul) 
+  
+   const age = document.createElement("li");
+   age.innerHTML = formData.get("age");
+   userInput.appendChild(age);
+  
+   const gender = document.createElement("li");
+   gender.innerHTML = formData.get("gender");
+   userInput.appendChild(gender);
+  
+  // Get the checkbox elements
+  const hotCheckbox = document.querySelector('input[name="hot"]');
+  const coldCheckbox = document.querySelector('input[name="cold"]');
+  
+  let drinkTemperature;
+  if (hotCheckbox.checked) {
+    drinkTemperature = "hot";
+  }
+  else if (coldCheckbox.checked) {
+    drinkTemperature = "cold";
+  }
+  
+  
+  
+  const drink = document.createElement("li");
+  drink.innerHTML = drinkTemperature;
+  userInput.appendChild(drink);
+  
+  
+  
+   const drinkname = document.createElement("li");
+   drinkname.innerHTML = formData.get("drinkname");
+   userInput.appendChild(drinkname);
+  
+  
+  });
