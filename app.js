@@ -66,7 +66,7 @@
 
   const myForm = document.getElementById("myForm");
   
-  myForm.addEventListener("submit", function(event)) {
+  myForm.addEventListener("submit", function(event) {
     event.preventDefault(); 
     
     const userInput= document.getElementById("userInput")
